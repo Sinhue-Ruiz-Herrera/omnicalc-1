@@ -31,4 +31,14 @@ class ApplicationController < ActionController::Base
     @square_root = Math.sqrt(@num).round(4)
     render({ :template => "calculation_templates/square_root_results.html.erb" })
   end
+
+  def payment_new
+    render({ :template => "calculation_templates/payment_new.html.erb" })
+  end
+
+  def payment_results
+    @num = params.fetch("elephant").to_f
+
+    render({ :template => "calculation_templates/payment_results.html.erb" })
+  end
 end
