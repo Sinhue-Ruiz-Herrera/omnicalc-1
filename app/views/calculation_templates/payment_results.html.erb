@@ -2,7 +2,7 @@
 <dl>
 <div>
   <dt>APR</dt>
-  <dd><%= @num_apr %></dd>
+  <dd><%= @num_apr.to_s(:percentage, { :precision => 4})%></dd>
 </div>
 
 <div>
